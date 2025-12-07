@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'api.users',
     'api.products',
     'api.orders',
-    'api.messages',
+    'api.messaging',
     'api.notifications',
     'api.payments',
 ]
