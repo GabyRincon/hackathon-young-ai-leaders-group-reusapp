@@ -17,13 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from api.products.views import home
 
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('api/users/', include('api.users.urls')),
     path('api/products/', include('api.products.urls')),
     path('api/orders/', include('api.orders.urls')),
-    path('api/messages/', include('api.messages.urls')),
+    path('api/messaging/', include('api.messaging.urls')),
     path('api/notifications/', include('api.notifications.urls')),
     path('api/payments/', include('api.payments.urls')),
 ]
